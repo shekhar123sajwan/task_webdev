@@ -1,0 +1,248 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center; /* Center-align the text */
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: #ff6b82;
+  position: relative;
+  overflow: hidden;
+}
+
+h1::before,
+h1::after {
+  content: ""; /* Adds empty content before and after the h1 */
+  position: absolute;
+  top: 50%;
+  width: 40%; /* Adjust the width as needed */
+  height: 1.5px; /* Border thickness */
+  background-color: #c8c8c8; /* Border color */
+}
+
+h1::before {
+  left: 0px;
+  margin-left: -15%; /* Centers the left border */
+}
+
+h1::after {
+  right: 0;
+  margin-right: -15%; /* Centers the right border */
+}
+
+/* Hide the default radio button */
+input[type="radio"] {
+  display: none;
+}
+
+/* Custom radio button style */
+.custom-radio {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.radio-button {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid #ff6b82; /* Set the border color */
+  margin-right: 8px;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* When radio button is checked */
+input[type="radio"]:checked + .radio-button {
+  background-color: #ffffff; /* Set the checked color */
+}
+
+.radio-button1:nth-child(2)::before {
+  border: 5px solid #ff6b82;
+}
+.radio-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+  padding: 0px;
+  /* border: 5px solid #ff6b82; */
+}
+
+/* Change inner dot color when checked */
+input[type="radio"]:checked + .radio-button::before {
+  background-color: white; /* Color of the inner dot when checked */
+}
+
+span.unit {
+  font-size: 17px;
+  font-weight: bold;
+}
+span.discount {
+  font-size: 12px;
+  background: #ff6b82;
+  color: #ffffff;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+span.unit {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+.selectBox {
+  padding-top: 2px;
+  margin-right: 7px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.priceCart-container {
+  display: flex;
+  padding: 15px;
+  border: 2px solid #c8c8c8;
+  border-radius: 2px;
+  margin-top: 25px;
+}
+
+span.standard-price {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 14.52px;
+}
+.unit-items-price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.unit-items-price > p {
+  padding: 0;
+  margin: 0;
+}
+
+span.discount-price {
+  font-size: 10px;
+  line-height: 12.1px;
+  color: #c8c8c8;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+span.amount {
+  color: #000000;
+  font-size: 14.46px;
+  line-height: 17.5px;
+  font-weight: 500;
+}
+.banner {
+  background-color: #ff6b81; /* Light red/pink color */
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 4px;
+  margin-top: -7px;
+  margin-right: 5px;
+}
+
+.banner::before,
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+}
+
+.banner::before {
+  left: -6px;
+  border-width: 0px 0px 7px 7px;
+  border-color: #00000000 #00000000 #f44336 #00000000;
+}
+
+.banner::after {
+  right: -10px;
+  border-width: 6px 4px 0px 7px;
+  border-color: transparent transparent transparent #ff6b81;
+}
+.wrapper-container .priceCart-container {
+  position: relative;
+}
+
+.priceCart-container.active {
+  border: 2px solid #ff6b82;
+}
+
+table th {
+  font-size: 10px;
+  font-weight: 500;
+}
+table tr {
+  font-size: 12px;
+}
+
+.details p {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  margin-top: 10px;
+}
+
+select {
+  padding: 2px 5px;
+}
+
+.wrapper-container:first-child .priceCart-container {
+  border: 2px solid #f44336;
+}
+.footer-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.footer-label p:first-child {
+  color: #ff6b82;
+}
+
+.add-to-cart {
+  width: 100%;
+  background-color: #ff6b82;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
